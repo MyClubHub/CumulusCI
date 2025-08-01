@@ -69,7 +69,7 @@ When finished, [verify your installation](verify-your-installation).
 1.  Go to the [Python downloads
     page](https://www.python.org/downloads/windows/).
 
-2.  Download the latest Python 3.9 release. Most users select the
+2.  Download the latest Python 3.12 release. Most users select the
     "Windows Installer (64-bit)" link, but it depends on your
     particular computer setup.
 
@@ -151,8 +151,8 @@ running `cci version`.
 
 ```console
 $ cci version
-CumulusCI version: 3.29.0 (/path/to/bin/cci)
-Python version: 3.8.5 (/path/to/bin/python)
+CumulusCI version: 4.3.0 (/path/to/bin/cci)
+Python version: 3.12 (/path/to/bin/python)
 
 You have the latest version of CumulusCI.
 ```
