@@ -402,7 +402,7 @@ requires-dist = [
     { name = "click", specifier = ">=8.1" },
     { name = "cryptography" },
     { name = "defusedxml" },
-    { name = "docutils", specifier = ">=0.21.2" },
+    { name = "docutils", specifier = "==0.21.2" },
     { name = "faker" },
     { name = "fs" },
     { name = "github3-py" },
