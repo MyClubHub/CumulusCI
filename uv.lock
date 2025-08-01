@@ -299,7 +299,7 @@ wheels = [
 
 [package.optional-dependencies]
 toml = [
-    { name = "tomli", marker = "python_full_version <= '3.11' and python_full_version >= '3.11'" },
+    { name = "tomli", marker = "python_full_version <= '3.12' and python_full_version >= '3.12'" },
 ]
 
 [[package]]
@@ -1867,7 +1867,7 @@ version = "6.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pyyaml" },
-    { name = "urllib3", marker = "python_full_version >= '3.11'" },
+    { name = "urllib3", marker = "python_full_version >= '3.12'" },
     { name = "wrapt" },
     { name = "yarl" },
 ]
