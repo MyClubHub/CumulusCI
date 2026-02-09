@@ -6,10 +6,10 @@ import os
 from typing import List, Optional
 from zipfile import ZipFile
 
-import pydantic
+import pydantic.v1 as pydantic
 from github3.exceptions import NotFoundError
 from github3.repos.repo import Repository
-from pydantic.networks import AnyUrl
+from pydantic.v1.networks import AnyUrl
 
 from cumulusci.core.config import OrgConfig
 from cumulusci.core.config.project_config import BaseProjectConfig
@@ -519,20 +519,6 @@ class PackageVersionIdDependency(StaticDependency):
             )
             return
 
-        package = org.get_package_from_version(self.version_id, options.password)
-
-        if package:
-            package_id = package["SubscriberPackageId"]
-            package_version_number = f"{package['MajorVersion']}.{package['MinorVersion']}.{package['PatchVersion']}"
-
-            if org.has_minimum_package_version(
-                package_id,
-                package_version_number,
-            ):
-                context.logger.info(
-                    f"{self} or a newer version is already installed; skipping."
-                )
-                return
         context.logger.info(f"Installing {self.description}")
         install_package_by_version_id(
             context,
